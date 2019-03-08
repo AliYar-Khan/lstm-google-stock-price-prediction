@@ -1,4 +1,4 @@
-##Google stock prices using LSTM
+## Google stock prices using LSTM
 
 This codebase predict stock prices using Long-Short term mermory (LSTM)  and also plot the result in a chart.
 
