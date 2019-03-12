@@ -43,6 +43,18 @@ inputs = real_stock_price
 
 
 inputs = scaler.transform(inputs)
+
+# [samples, time_steps, features]
+# Samples - This is the len(inputs), or the amount of data points you have.
+
+# Time steps - This is equivalent to the amount of time steps you run your recurrent
+# neural network. If you want your network to have memory of 60 characters,
+# this number should be 60.
+
+# Features - this is the amount of features in every time step.
+# If you are processing pictures, this is the amount of pixels.
+# In this case you seem to have 1 feature per time step.
+
 inputs = np.reshape(inputs, (inputs.shape[0], 1, 1))
 predicted_stock_price = regressor.predict(inputs)
 
